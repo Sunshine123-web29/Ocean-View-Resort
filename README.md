@@ -1,4 +1,4 @@
-# Ocean View Resort Management System 🏨
+# Ocean View Resort Management System 
 
 ![Version](https://img.shields.io/badge/version-2.0.0-blue)
 ![Build](https://img.shields.io/badge/build-passing-brightgreen)
