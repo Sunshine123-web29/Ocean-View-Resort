@@ -1,75 +1,78 @@
-# Student performance prediction using MLops
-## Demo video of Student performance prediction
-https://github.com/saibattula93/Student_Performance_Prediction/assets/116423301/8ec0ef26-c3f5-4a50-9c74-968a0e7bd416
+# Ocean View Resort Management System 🏨
 
-Welcome to the Student Performance Prediction using MLops in Regression project! In this repository, we present an end-to-end solution for predicting student performance using Machine Learning and adopting MLOps practices. This README provides an overview of the model, its motivation, success metrics, requirements, methodology, architecture, pipeline, and conclusion.
+![Version](https://img.shields.io/badge/version-2.0.0-blue)
+![Build](https://img.shields.io/badge/build-passing-brightgreen)
+![Java](https://img.shields.io/badge/Java-JDK%2017%2B-orange)
 
-## 1. Overview of the Model
-This project understands how the student’s performance (test scores) is affected by other variables such as Gender, Ethnicity, Parental level of education, and Lunch and Test preparation course.
+A comprehensive Java-based desktop application designed to streamline hotel operations, guest management, and automated billing for Ocean View Resort.
 
-## 2. Motivation of the Model
-The motivation behind this model is to assist educational institutions in identifying students who might be at risk of underperforming. By predicting student performance early, educators can provide timely interventions and support, potentially improving overall success rates.
+---
 
-## 3. Success Metrics
-The success of the model will be evaluated based on metrics such as Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and R-squared score, which measure the accuracy and goodness-of-fit of the regression model.
+## Project Overview
+The Ocean View Resort Management System is a robust software solution developed to replace manual record-keeping. It features secure user authentication, real-time guest tracking, and professional PDF invoice generation. The system follows the **DAO (Data Access Object)** pattern to ensure clean separation between the UI and database logic.
 
-## 4. Requirements & Constraints
-### 4.1. Functional Requirements
-Access to labeled student performance dataset.
-Machine Learning libraries (e.g., scikit-learn, TensorFlow).
-Deployment platform (e.g., Docker, cloud services).
-### 4.2. Non-Functional Requirements
-Scalability: The model should be able to handle a growing number of students and features.
+### Key Features
+* **Secure Authentication:** Role-based login system for administrators and staff.
+* **Guest Management:** Full CRUD (Create, Read, Update, Delete) functionality for guest records.
+* **Automated Billing:** Instant calculation of stay costs with automated PDF invoice generation.
+* **Live Reporting:** Real-time occupancy lists and printable reports.
+* **Data Integrity:** Backed by a MySQL database with strict schema constraints.
 
-Latency: Real-time predictions for timely interventions.
+---
 
-Security: Protecting student data and ensuring compliance with data privacy regulations.
-### 4.3. Constraints
-Availability and quality of input data may impact the model’s accuracy.
-Resource constraints might affect the choice of algorithms and deployment options.
-### 4.4. Out-of-Scope
-Individual student-level interventions are out of scope; the model provides predictions but not recommendations for action.
+## Directory Hierarchy
+The repository is organized according to professional Java/Eclipse standards:
 
-## 5. Methodology
-### 5.1. Problem Statement
-Given historical student performance data and relevant features, build a regression model that can accurately predict the final grades of students.
+* **/src** → Java source files organized into packages (`com.oceanview.util`, `com.oceanview.dao`, `com.oceanview.model`, `com.oceanview.controller`).
+* **/lib** → External JAR libraries (MySQL Connector, JasperReports, JUnit).
+* **/database** → SQL schema scripts, table structures, and sample data.
+* **/tests** → JUnit test cases for unit and integration testing.
+* **/assets** → UI screenshots, icons, and design mockups.
+* **/docs** → Requirements, UML diagrams, and testing plans.
 
-### 5.2. Data
-The dataset should include features like study hours, attendance, previous exam scores, and final grades. It should be split into training and testing sets for model evaluation.
+---
 
-### 5.3. Techniques
-Data preprocessing: Handle missing values, feature scaling, and encoding categorical variables.
+## Installation & Setup
 
-Feature selection: Identify the most relevant features for prediction.
+### Prerequisites
+* **Java Development Kit (JDK) 17** or higher.
+* **MySQL Server** (Local or Cloud).
+* **IDE:** Eclipse, NetBeans, or IntelliJ IDEA.
 
-Model selection: Choose regression algorithms (e.g., Linear Regression, Random Forest) and perform hyperparameter tuning.
+### Setup Steps
+1.  **Clone the Repository:**
+    ```bash
+    git clone [https://github.com/Sunshine123-web29/Ocean-View-Resort-System.git](https://github.com/Sunshine123-web29/Ocean-View-Resort-System.git)
+    ```
+2.  **Database Configuration:**
+    * Import the SQL script located in `/database/oceanview_db.sql` into your MySQL server.
+    * Update the `DBConnection.java` file with your MySQL username and password.
+3.  **Library Configuration:**
+    * Add all JAR files from the `/lib` folder to your project's Build Path.
+4.  **Run the Application:**
+    * Execute the `LoginFrame.java` file from the `com.oceanview.ui` package.
 
-MLOps integration: Implement CI/CD, model monitoring, and automated retraining for continuous improvement.
+---
 
-## 6. Architecture
-The architecture consists of the following components:
+## Testing (TDD)
+This project utilizes **Test-Driven Development (TDD)**. Automated tests are implemented using **JUnit** to verify database connectivity and DAO logic.
+* Run tests located in the `/tests` folder to verify system stability.
+* Current Status: **All tests passed (v2.0.0)**.
 
-1. **Data Ingestion:** Fetch and preprocess data.
-2. **Data preprocessing:** Implement the data preprocessing technique.
-3. **Model Training:** Build and train the regression model.
-4. **Model Evaluation:** Assess model performance using test data.
-5. **Model Deployment:** Deploy the model using a suitable platform.
-6. **MLOps Pipeline:** Automate data updates, model retraining, and deployment.
+---
 
-## 7. Pipeline
-1. Data Collection & Preprocessing
-2. Feature Engineering & Selection
-3. Model Building & Training
-4. Model Evaluation & Metrics Calculation
-5. Model Deployment & Monitoring
-6. Continuous Integration & Continuous Deployment (CI/CD)
-7. Model Retraining based on Data Drift
+## Version History
+* **v1.0.0:** Initial project setup and core UI components.
+* **v1.1.0:** Integrated MySQL DAO layer and CRUD logic.
+* **v1.2.0:** Added JasperReports for automated PDF billing.
+* **v2.0.0:** Final stable release with optimized UI and bug fixes.
 
+---
 
-## 8. Conclusion
-In this project, we have showcased a comprehensive approach to predict student performance using a regression model and MLOps practices. By accurately predicting student grades, educational institutions can take proactive measures to support struggling students and enhance overall academic success.
+## Developer
+**Kanchana Sewwandee Chandrasekara** *Software Engineering Undergraduate | Cardiff Metropolitan University*
 
-Life cycle of this project: ![image](https://github.com/saibattula93/Student_Performance_Prediction/assets/116423301/0b7b3892-f3ce-4517-9660-def3bd5debfc)
+---
 
-
-**If you can read on more about my project in detail please click my blog: https://www.analyticsvidhya.com/blog/2023/04/student-performance-analysis-and-prediction/** 
+## 📄 License
+This project is developed for academic purposes as part of the BSc (Hons) Software Engineering program.
